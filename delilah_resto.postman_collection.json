@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "2ee03379-3948-47ce-b7b4-8cb7e48634e8",
+		"name": "delilah_resto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "GET productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJub21icmVfdXN1YXJpbyI6Ik1hcmlhX0Nhbm8iLCJub21icmVfY29tcGxldG8iOiJNYXJpYSBBbGVqYW5kcmEgQ2FubyBNb3Jlbm8iLCJjb3JyZW9fZWxlY3Ryb25pY28iOiJtYXJpYWNhbm9AZ21haWwuY29tIiwidGVsZWZvbm8iOjMxMTMyNDYzMjgsImRpcmVjY2lvbl9kZV9lbnZpbyI6IkNhcnJlcmEgMzAgIyA0NS0xMi4gQXB0byA0MDIiLCJjb250cmFzZW5hIjoibGFwaXoxMjMiLCJpYXQiOjE1OTA2NjUyOTh9.xLy4P6blldOWxI2MGE0yAHV1UeQc2cFPCAssIfoZ2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Astrid\",\n    \"apellido\":\"Castro\",\n    \"fechadeNacimiento\":\"3/12/1993\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI5NjMzMDB9.FupSu2pDP_i72lnUTu7CdpBQv7jblli34g9u3FGl1SM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombre_plato\": \"Bagel de mariscos\",\n        \"precio\": 600\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI5NjMzMDB9.FupSu2pDP_i72lnUTu7CdpBQv7jblli34g9u3FGl1SM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/productos/22",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI5NjMzMDB9.FupSu2pDP_i72lnUTu7CdpBQv7jblli34g9u3FGl1SM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombre_plato\": \"Bagel de salmón 2\",\n        \"precio\": 425\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/productos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "GET usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJub21icmVfdXN1YXJpbyI6Ik1hcmlhX0Nhbm8iLCJub21icmVfY29tcGxldG8iOiJNYXJpYSBBbGVqYW5kcmEgQ2FubyBNb3Jlbm8iLCJjb3JyZW9fZWxlY3Ryb25pY28iOiJtYXJpYWNhbm9AZ21haWwuY29tIiwidGVsZWZvbm8iOjMxMTMyNDYzMjgsImRpcmVjY2lvbl9kZV9lbnZpbyI6IkNhcnJlcmEgMzAgIyA0NS0xMi4gQXB0byA0MDIiLCJjb250cmFzZW5hIjoibGFwaXoxMjMiLCJpYXQiOjE1OTA2NjUyOTh9.xLy4P6blldOWxI2MGE0yAHV1UeQc2cFPCAssIfoZ2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI5NjMzMDB9.FupSu2pDP_i72lnUTu7CdpBQv7jblli34g9u3FGl1SM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombre_usuario\": \"Ana_Perez\",\n        \"nombre_completo\": \"Ana Perez\",\n        \"correo_electronico\": \"ana@admin.com\",\n        \"telefono\": 3123123422,\n        \"direccion_de_envio\": \"Padre Urbano,8\",\n        \"contrasena\": \"123\",\n        \"rol\": \"cliente\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJub21icmVfdXN1YXJpbyI6Ik1hcmlhX0Nhbm8iLCJub21icmVfY29tcGxldG8iOiJNYXJpYSBBbGVqYW5kcmEgQ2FubyBNb3Jlbm8iLCJjb3JyZW9fZWxlY3Ryb25pY28iOiJtYXJpYWNhbm9AZ21haWwuY29tIiwidGVsZWZvbm8iOjMxMTMyNDYzMjgsImRpcmVjY2lvbl9kZV9lbnZpbyI6IkNhcnJlcmEgMzAgIyA0NS0xMi4gQXB0byA0MDIiLCJjb250cmFzZW5hIjoibGFwaXoxMjMiLCJpYXQiOjE1OTA2NjUyOTh9.xLy4P6blldOWxI2MGE0yAHV1UeQc2cFPCAssIfoZ2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nombre_usuario\": \"Astrid_Castro\",\n        \"contrasena\": \"admin123\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "GET pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI4NzcxOTl9.Wq7NVTna-85RJsxRp8U7eyhKkDLmPTCiqK-9ATbk_VE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pedidos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoyLCJub21icmVfdXN1YXJpbyI6IkNhbWlsb19BcmRpbGEiLCJub21icmVfY29tcGxldG8iOiJDYW1pbG8gQW5kcmVzIEFyZGlsYSBDYXJvIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiY2FtaWxvYXJkaWxhQGdtYWlsLmNvbSIsInRlbGVmb25vIjozMTI1NDM3NjIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJDYXJyZXJhIDMxICMgMjMtMTUuIEFwdG8gMzAxIiwiY29udHJhc2VuYSI6ImF6dWwxMjMiLCJyb2wiOiJjbGllbnRlIiwiaWF0IjoxNTkyODc5NjE0fQ.QMwchlDL5jx7ZOYIJB9jDu2QHh7C_wvor_E_J21TFDQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estado\": \"nuevo\",\n    \"hora\": \"20:10:00\",\n    \"metodo_de_pago\": \"efectivo\",\n    \"fecha_creacion\": \"2020-05-16\",\n    \"fecha_actualizacion\": \"2020-05-31\",\n    \"productos\": [\n        {\n            \"id_producto\": \"1\",\n            \"cantidad\": \"2\"\n        },\n        {\n            \"id_producto\": \"2\",\n            \"cantidad\": \"3\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pedidos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI5NjA0MDJ9.GD9plVgh5jHv9Og0ATNV4Nzit1sHV2vgENtdDXAPYw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"estado\": \"nuevo\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pedidos/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo4LCJub21icmVfdXN1YXJpbyI6IkFzdHJpZF9DYXN0cm8iLCJub21icmVfY29tcGxldG8iOiJBc3RyaWQgWWFtaWxlIENhc3RybyBNYXlvcmdhIiwiY29ycmVvX2VsZWN0cm9uaWNvIjoiYXN0cmlkY2FzdHJvQGFkbWluLmNvbSIsInRlbGVmb25vIjozMTIzMTIzNDIxLCJkaXJlY2Npb25fZGVfZW52aW8iOiJQYWRyZSBVcmJhbm8sNyIsImNvbnRyYXNlbmEiOiJhZG1pbjEyMyIsInJvbCI6ImFkbWluaXN0cmFkb3IiLCJpYXQiOjE1OTI4NzgyMDB9.oHP0F642ddF99Lem_6W5k1al26gmqYkog1oc1Oat5xY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pedidos/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pedidos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
