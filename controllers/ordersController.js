@@ -70,16 +70,17 @@ exports.postOrders = async (req, res) => {
 
 exports.deleteOrders = (req, res) => {
   const id_pedido = req.params.id_pedido;
-  const id_usuario = req.usuario.id_usuario;
   sequelize
-    .query("DELETE FROM pedidos WHERE id_pedido = ? and id_usuario = ?", {
-      replacements: [id_pedido, id_usuario],
+    .query("DELETE FROM pedidos WHERE id_pedido = ?", {
+      replacements: [id_pedido],
     })
     .then(function (resultados) {
-      console.log("Results", resultados);
-      res.status(201).send("Pedido borrado con éxito");
+      if(resultados[0].affectedRows>0)
+      res.json({message:"Pedido borrado con éxito"});
+      else res.status(404).json({error:"El pedido no existe"});
     });
 };
+
 
 exports.updateOrders = (req, res) => {
   console.log(req.body);

@@ -16,11 +16,13 @@ exports.autenticarUsuario = (req, res, next) => {
 
 exports.autenticarAdmin = (req, res, next) => {
   if (req.path != "/login") {
+    if (!req.headers.authorization) {
+      return res.status(403).send({ error: "Error al validar el usuario" });
+    }
     const token = req.headers.authorization.split(" ")[1];
     jwt.verify(token, firma, function (error, decoded) {
       if (error)
         return res.status(403).send({ error: "Error al validar el usuario" });
-      // req.idCliente = decoded.id_usuario
       if (req.method != "GET") {
         if (decoded.rol == "administrador") {
           console.log("decode.rol");
